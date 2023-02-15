@@ -25,8 +25,7 @@ if (isset($_POST['submit'])) {
         <labelb for="age">age: </label><input type="number" name="age" required></input>
     </div>
     <div>
-    <input type="submit" value="submit" name="submit"
-    >
+    <input type="submit" value="submit" name="submit">
     </div> 
 </form>
 <!--link-->
