@@ -6,6 +6,7 @@ Pt: As sessões são uma forma de armazenar informações (em variáveis) para s
 */
 
 //Sessions: 
+session_start();
 
 if(isset($_POST['submit'])){
     $username= filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS );
@@ -13,10 +14,12 @@ if(isset($_POST['submit'])){
 
     if ($username=='john' && $password=='password') {
         $_SESSION['username'] = $username;
-        header('Location: /13.1_dashboard.php');
+        header('Location : /13.1_dashboard.php');
     } else{
         echo'incoret login </br> login incorrecto <hr></br>'; 
     }
+
+}
 ?>
 
 <!--HTML-->
@@ -27,10 +30,10 @@ if(isset($_POST['submit'])){
         <label for="username">username: </label><input type="text" name="username"  required></input>
     </div>
    
-    <div class="password">
+    <div  class="password">
         <labelb for="password">password: </label><input type="text" name="password" required></input>
     </div>
     
     <input type="submit" value="submit" name="submit">
-    
 </form>
+<!-- end form-->
