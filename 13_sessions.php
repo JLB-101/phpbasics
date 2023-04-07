@@ -1,5 +1,4 @@
 <?php
-
 /*
 Eng: Sessions are a way to store information ( in variables ) to be used across multiple pages . Unlike cookies , sessions are stored on the server.
 
@@ -9,19 +8,22 @@ Pt: As sessões são uma forma de armazenar informações (em variáveis) para s
 //Sessions: 
 
 
-if(isset($_POST['submit'])){$username= filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS ) ; $password = $_POST['password'];
+if(isset($_POST['submit'])){
+    $username= filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS ) ;
+    $password = $_POST['password'];
 
-if ($username == 'john' && $password = 'password') {
-$_SESSION ['username'] = $username; header('Location : /php-crash/extras/dashboard.php');
-} else{echo }
-
+    if ($username == 'john' && $password = 'password') {
+        $_SESSION ['username'] = $username; header('Location : /php-crash/extras/dashboard.php');
+    } else{
+        echo'incoret login </br> login incorrecto <hr></br>'; 
+    }
 ?>
 
 <!--HTML-->
 <!--Form-->
-< form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST"> 
+<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST"> 
     <div>
-        <label for="name">Name: </label><input type="text" name="name"  required></input>
+        <label for="username">username: </label><input type="text" name="username"  required></input>
     </div>
     <div>
         <labelb for="age">age: </label><input type="number" name="age" required></input>
@@ -31,5 +33,3 @@ $_SESSION ['username'] = $username; header('Location : /php-crash/extras/dashboa
     </div> 
 </form>
 <!--link-->
-
-<!--end HTML-->
