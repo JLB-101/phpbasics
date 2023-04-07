@@ -19,7 +19,7 @@ $_SESSION ['username'] = $username; header('Location : /php-crash/extras/dashboa
 
 <!--HTML-->
 <!--Form-->
-< form action = " < ? php echo htmlspecialchars ( $ _ SERVER [ ' PHP_SELF ' ] ) ; ? > " method = " POST " > 
+< form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST"> 
     <div>
         <label for="name">Name: </label><input type="text" name="name"  required></input>
     </div>
