@@ -34,6 +34,6 @@ if(isset($_POST['submit'])){
         <labelb for="password">password: </label><input type="text" name="password" required></input>
     </div>
     
-    <input type="submit" value="submit" name="submit">
+    <input type="submit" value="Login" name="submit">
 </form>
 <!-- end form-->
