@@ -7,13 +7,13 @@ Pt: As sessões são uma forma de armazenar informações (em variáveis) para s
 
 //Sessions: 
 
-
 if(isset($_POST['submit'])){
-    $username= filter_input(INPUT_POST,'username', FILTER_SANITIZE_SPECIAL_CHARS ) ;
+    $username= filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS );
     $password = $_POST['password'];
 
-    if ($username == 'john' && $password = 'password') {
-        $_SESSION ['username'] = $username; header('Location : /php-crash/extras/dashboard.php');
+    if ($username=='john' && $password=='password') {
+        $_SESSION['username'] = $username;
+        header('Location : /php-crash/extras/dashboard.php');
     } else{
         echo'incoret login </br> login incorrecto <hr></br>'; 
     }
@@ -22,14 +22,14 @@ if(isset($_POST['submit'])){
 <!--HTML-->
 <!--Form-->
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST"> 
-    <div>
+    
+    <div class="username">
         <label for="username">username: </label><input type="text" name="username"  required></input>
     </div>
-    <div>
-        <labelb for="age">age: </label><input type="number" name="age" required></input>
+   
+    <div  class="password">
+        <labelb for="password">password: </label><input type="text" name="password" required></input>
     </div>
-    <div>
+    
     <input type="submit" value="submit" name="submit">
-    </div> 
 </form>
-<!--link-->
