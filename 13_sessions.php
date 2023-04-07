@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
 
     if ($username=='john' && $password=='password') {
         $_SESSION['username'] = $username;
-        header('Location : /php-crash/extras/dashboard.php');
+        header('Location: /13.1_dashboard.php');
     } else{
         echo'incoret login </br> login incorrecto <hr></br>'; 
     }
