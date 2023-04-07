@@ -1,5 +1,13 @@
 <?
 
+/*
+Eng: Sessions are a way to store information ( in variables ) to be used across multiple pages . Unlike cookies , sessions are stored on the server.
+
+Pt: As sessões são uma forma de armazenar informações (em variáveis) para serem usadas em várias páginas.  Ao contrário dos cookies, as sessões são armazenadas no servidor.
+*/
+
+//Sessions: 
+
 if (isset($_POST['submit'])) {
     //Eng: 1a option: || Pt: 1a opcao
     // $name = htmlspecialchars($_POST['name']);
