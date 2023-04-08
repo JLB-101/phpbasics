@@ -1,3 +1,4 @@
+
 <?php include 'inc/header.php'; ?>
 
 <?php
@@ -44,7 +45,7 @@ if (isset($_POST['submit'])) {
     $sql = "INSERT INTO feedback (name, email, body) VALUES ('$name', '$email', '$body')";
     if (mysqli_query($conn, $sql)) {
       // success
-      header('Location: feedback.php');
+      header('Location: ../feedback.php');
     } else {
       // error
       echo 'Error: ' . mysqli_error($conn);
@@ -52,8 +53,9 @@ if (isset($_POST['submit'])) {
   }
 }
 ?>
-
-    <img src="/php-crash/feedback/img/logo.png" class="w-25 mb-3" alt="">
+../about.php
+ 
+    <img src="../feedback/img/logo.png" class="w-25 mb-3" alt="">
     <h2>Feedback</h2>
     <?php echo isset($name) ? $name : ''; ?>
     <p class="lead text-center">Leave feedback for Traversy Media</p>
