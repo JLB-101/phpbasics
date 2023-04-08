@@ -83,7 +83,7 @@ echo 'output | saída na tela: <br> name of user <br> nome do usuário :'. $user
 echo "<hr>";
 
 //vardump($user1);
-$user1->$email = "Juliao@outlook.com*";
+$user1->$email = "Juliao@outlook.com";
 $user1->$password = "############";
 var_dump($user1);
 echo "<hr>";
