@@ -6,16 +6,14 @@ if(isset($_POST['submit'])){
 
     ///
     if(!empty($_FILES['upload']['name'])){
-        print_r($_FILES);
-        $Ffile_name = $_FILES['upload']['name'];
+        // print_r($_FILES);
+        $file_name = $_FILES['upload']['name'];
         $file_size = $_FILES['upload']['size'];
         $file_tmp = $_FILES['upload']['tmp_name'];
-
-        //
-        $target_dir = "uploads/${file_name}";
+        $target_dir = "uploads/$file_name";
 
         //get file ext
-        $file_ext = explode('.', $Ffile_name);
+        $file_ext = explode('.', $file_name);
         $file_ext = strtolower(end($Ffile_name));
 
         //validate file ext
@@ -24,8 +22,10 @@ if(isset($_POST['submit'])){
                 move_uploaded_file($file_tmp, $target_dir);
 
                 $massage = '<p style="color:green;">file uploaded successfully</p><br> <p style="color:red;">arquivo enviado com sucesso</p><br>';
+            }else{
+                $massage = '<p style="color:red;">File is too large</p><br> <p style="color:red;">O Arquivo e muito grande</p><br>';
             }
-
+    
 
         }else{
             $massage = '<p style="color:red;">Please choose a file</p><br> <p style="color:red;">Escolha um arquivo</p><br>';
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
         <!--fild | campo -->
         <input type="file" name="upload">
          <!--Button -- botao para submeter -->
-         <input type="submit" name="Submit" name='submit'>
+         <input type="submit" value="submit" name='submit'>
 
     </di>
     </form>
