@@ -1,2 +1,2 @@
 # phpbasics
- php basic course.
+New php math function is added
